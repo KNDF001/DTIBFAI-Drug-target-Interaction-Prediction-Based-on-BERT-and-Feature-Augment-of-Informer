@@ -1,0 +1,1 @@
+# DTIBFAI-Drug-target-Interaction-Prediction-Based-on-BERT-and-Feature-Augment-of-Informer
