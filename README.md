@@ -8,16 +8,16 @@
 **This project requires additional files that are not included in the repository.**  
 **请在项目运行前检查项目目录是否完整**
 Please download the following resources before proceeding:  
-- Pre-trained models: [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChembERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
-- Dataset files: [Full Dataset Package](https://example.com/dataset-download)
+- Pre-trained models(huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChembERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
+- Dataset files(Baidu Webdisk): [Full Dataset Package](https://example.com/dataset-download)
 - (我们也提供基于百度网盘的预训练模型下载，您可以通过以下链接下载)
-- Pre-trained models Download Based on Baidu WebDisk : [All models](https://example.com/dataset-download)
+- Pre-trained models Download Based on Baidu WebDisk(Baidu Webdisk): [All models](https://example.com/dataset-download)
 
 
 ## 🚀 功能特性
 - **双模态编码**：结合BioBERT蛋白质编码与ChEMBERT药物分子编码
 - **特征融合**：整合ECFP分子指纹与二肽组成特征
-- **高效训练**：支持GPU加速与预训练模型冻结
+- **高效训练**：引入ProbAttention降低模型内存和时间开销
 - **评估指标**：AUC-ROC、AUPR、F1-Score等综合评估体系
 
 
