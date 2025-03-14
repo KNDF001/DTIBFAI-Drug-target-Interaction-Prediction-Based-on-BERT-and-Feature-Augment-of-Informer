@@ -3,10 +3,12 @@
 
 基于深度学习的药物-靶标相互作用预测模型，整合蛋白质序列特征与药物分子表示
 
-⚠️⚠️ ​**Important Notice** ⚠️⚠️ 
+⚠️⚠️ ​**重要提示 Important Notice** ⚠️⚠️ 
 
-**This project requires additional files that are not included in the repository.**  
-**请在项目运行前检查项目目录是否完整**
+**这个项目需要存储库中没有包含的其他文件 
+This project requires additional files that are not included in the repository.**  
+**请在项目运行前检查项目目录是否完整 
+Please check that the project directory is complete before running the project**
 
 Please download the following resources before proceeding:  
 - Pre-trained models(huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
