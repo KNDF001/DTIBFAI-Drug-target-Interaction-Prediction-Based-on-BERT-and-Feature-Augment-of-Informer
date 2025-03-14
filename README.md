@@ -15,7 +15,7 @@ Please download the following resources before proceeding:
 - 预训练模型 Pre-trained models(抱脸 huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
 - 数据集压缩包 Dataset files(百度网盘 Baidu Webdisk): [Full Dataset Package](https://pan.baidu.com/s/1TNyLJSUbYj0lGsQfLDdjTA?pwd=4jxz)
 - (我们也提供基于百度网盘的预训练模型下载，您可以通过以下链接下载)
-- 百度网盘存储的预训练模型 Pre-trained models Download Based on Baidu WebDisk(百度网盘 Baidu Webdisk): [All models](https://example.com/dataset-download)
+- 百度网盘存储的预训练模型 Pre-trained models Download Based on Baidu WebDisk(百度网盘 Baidu Webdisk): [Pre-trained models](https://pan.baidu.com/s/1PfUJuOnSrMe0mjqcrjqsag?pwd=4kex)
 
 
 ## 🚀 功能特性 Functional features
