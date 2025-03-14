@@ -4,10 +4,15 @@
 基于深度学习的药物-靶标相互作用预测模型，整合蛋白质序列特征与药物分子表示
 
 ⚠️⚠️ ​**Important Notice** ⚠️⚠️ 
+
 **This project requires additional files that are not included in the repository.**  
+**请在项目运行前检查项目目录是否完整**
 Please download the following resources before proceeding:  
-- Pre-trained models: [BioBERT](https://example.com/biobert-download) | [ChambERT](https://example.com/chamberts-download)
+- Pre-trained models: [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChembERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
 - Dataset files: [Full Dataset Package](https://example.com/dataset-download)
+- (我们也提供基于百度网盘的预训练模型下载，您可以通过以下链接下载)
+- Pre-trained models Download Based on Baidu WebDisk : [All models](https://example.com/dataset-download)
+
 
 ## 🚀 功能特性
 - **双模态编码**：结合BioBERT蛋白质编码与ChEMBERT药物分子编码
@@ -15,7 +20,8 @@ Please download the following resources before proceeding:
 - **高效训练**：支持GPU加速与预训练模型冻结
 - **评估指标**：AUC-ROC、AUPR、F1-Score等综合评估体系
 
-## 🗂 项目结构
+
+## 🗂 项目结构（请在项目运行前检查项目结构是否完整）
 ```bash
 .
 ├── biobert-v1.2/            # BioBERT预训练模型
@@ -34,6 +40,7 @@ Please download the following resources before proceeding:
 └── output.txt               # 训练日志
 ```
 
+
 ## 📦 环境依赖
 - Python 3.8+
 - PyTorch 1.12+
@@ -47,10 +54,11 @@ Please download the following resources before proceeding:
 pip install torch transformers scikit-learn pandas numpy
 ```
 
+
 ## 📂 数据准备
 1. 下载预训练模型：
-   - [BioBERT-v1.2](https://huggingface.co/dmis-lab/biobert-v1.2) 放置于 `biobert-v1.2/`
-   - [ChEMBERT](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM) 放置于 `chamberts/`
+   - [BioBERT-v1.2](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2/tree/main) 放置于 `biobert-v1.2/`
+   - [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM) 放置于 `chamberts/`
 
 2. 数据集结构：
 ```bash
@@ -71,24 +79,20 @@ dataset/
 
 ## 🏃 训练流程
 ```bash
-python train.py \
-  --batch-size 32 \
-  --epochs 50 \
-  --lr 1e-5 \
-  --workers 4
+python train.py
 ```
 
 关键参数：
 - `--batch-size`: 批次大小 (默认：16)
 - `--epochs`: 训练轮次 (默认：50)
 - `--lr`: 初始学习率 (默认：1e-5)
-- `--workers`: 数据加载线程数
 
 
 ## 📜 许可证
 本项目采用 MIT 许可证 - 详见 [LICENSE](LICENSE)
 
+
 ## 🙏 致谢
-- BioBERT: [DMIS-Lab](https://github.com/dmis-lab/biobert)
-- ChemBERTa: [DeepChem](https://github.com/deepchem/deepchem)
+- BioBERT: [DMIS-Lab](https://dmis.korea.ac.kr/)
+- ChemBERTa: [DeepChem](https://deepchem.io/)
 
