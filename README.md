@@ -9,7 +9,7 @@
 **请在项目运行前检查项目目录是否完整**
 
 Please download the following resources before proceeding:  
-- Pre-trained models(huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChembERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
+- Pre-trained models(huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
 - Dataset files(Baidu Webdisk): [Full Dataset Package](https://example.com/dataset-download)
 - (我们也提供基于百度网盘的预训练模型下载，您可以通过以下链接下载)
 - Pre-trained models Download Based on Baidu WebDisk(Baidu Webdisk): [All models](https://example.com/dataset-download)
@@ -22,7 +22,7 @@ Please download the following resources before proceeding:
 - **评估指标**：AUC-ROC、AUPR、F1-Score等综合评估体系
 
 
-## 🗂 项目结构（请在项目运行前检查项目结构是否完整）
+## 🗂 项目结构（请在项目运行前检查项目结构是否完整、文件夹命名是否正确）
 ```bash
 .
 ├── biobert-v1.2/            # BioBERT预训练模型
@@ -31,14 +31,24 @@ Please download the following resources before proceeding:
 │   └── vocab.txt
 ├── chamberts/               # ChEMBERT预训练模型
 │   ├── config.json
+│   ├── ...                  # （ChemBERTa预训练模型文件）
 │   └── pytorch_model.bin
 ├── dataset/                 # 数据存储
 │   └── sBioSNAP/
+│      ├── test.csv          # 测试集
+│      ├── val.csv           # 验证集
+│      ├── train.csv         # 训练集
+│      └── all.csv           # 总数据集
 ├── models.py                # 模型定义
 ├── config.py                # 超参数配置
 ├── stream.py                # 数据预处理
+├── attn.py                  # probattention注意力模块
+├── decoder.py               # 解码器
+├── encoder.py               # 编码器
+├── embed.py                 # 嵌入器
+├── setup.py                 # 项目描述
 ├── train.py                 # 主训练脚本
-└── output.txt               # 训练日志
+└── output.txt               # 模型在运行后生成的训练日志（可空缺）
 ```
 
 
@@ -57,7 +67,7 @@ pip install torch transformers scikit-learn pandas numpy
 
 
 ## 📂 数据准备
-1. 下载预训练模型：
+1. 下载预训练模型（huggingface）：
    - [BioBERT-v1.2](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2/tree/main) 放置于 `biobert-v1.2/`
    - [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM) 放置于 `chamberts/`
 
