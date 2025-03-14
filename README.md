@@ -13,7 +13,6 @@ Please download the following resources before proceeding:
 - [Data Preparation](#data-preparation)
 - [Pretrained Models](#pretrained-models)
 - [Usage](#usage)
-- [Results](#results)
 - [Citation](#citation)
 - [License](#license)
 
@@ -42,14 +41,14 @@ bash
 pip install -r requirements.txt
 Data Preparation
 Download dataset package and extract to:
+
 DTIBFAI/
 └── dataset/
-    ├── eeee-ECFP/
-    │   └── all.csv
     └── sBioSNAP/
         ├── train.csv
         ├── val.csv
         └── test.csv
+        
 File structure requirements:
 SMILES sequences in SMILES column
 Protein sequences in Target Sequence column
@@ -57,19 +56,20 @@ ECFP fingerprints stored as lists in ECFP column
 Pretrained Models
 Download and place models in project root:
 
-bash
 DTIBFAI/
 ├── biobert-v1.2/  # From BioBERT download
 └── chamberts/      # From ChambERT download
+
 Usage
 Training
-bash
+
 python train.py \
   --batch-size 16 \
   --epochs 50 \
   --lr 1e-5
+  
 Evaluation
-bash
+
 python test.py \
   --model-path ./saved_models/best_model.pth \
   --test-data ./dataset/sBioSNAP/test.csv
@@ -82,7 +82,6 @@ Optimal threshold calculations
 Citation
 If using this work, please cite:
 
-bibtex
 @misc{dtibfai2024,
   title={DTIBFAI: Biological Feature Augmented Interaction for Drug-Target Prediction},
   author={Your Name},
@@ -90,6 +89,7 @@ bibtex
   publisher={GitHub},
   howpublished={\url{https://github.com/yourusername/DTIBFAI}}
 }
+
 License
 This project is licensed under the MIT License - see LICENSE for details.
 
