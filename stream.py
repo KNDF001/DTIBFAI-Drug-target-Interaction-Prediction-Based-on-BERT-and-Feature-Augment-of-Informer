@@ -40,7 +40,7 @@ max_d = 205
 max_p = 512
 linear_layer = nn.Linear(600, 768)
 
-df = pd.read_csv("D:/BBM/dataset/eeee-ECFP/all.csv")
+df = pd.read_csv("./dataset/sBioSNAP/all.csv")
 
 def protein2emb_encoder(x):
 
