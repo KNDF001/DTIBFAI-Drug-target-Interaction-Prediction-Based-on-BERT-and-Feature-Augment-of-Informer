@@ -3,28 +3,29 @@
 
 基于深度学习的药物-靶标相互作用预测模型，整合蛋白质序列特征与药物分子表示
 
-⚠️⚠️ ​**重要提示 Important Notice** ⚠️⚠️ 
+## ⚠️⚠️ ​重要提示 Important Notice ⚠️⚠️ 
 
 **这个项目需要存储库中没有包含的其他文件 
 This project requires additional files that are not included in the repository.**  
 **请在项目运行前检查项目目录是否完整 
 Please check that the project directory is complete before running the project**
 
+在运行模型前请先下载下列文件：
 Please download the following resources before proceeding:  
-- Pre-trained models(huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
-- Dataset files(Baidu Webdisk): [Full Dataset Package](https://example.com/dataset-download)
+- 预训练模型 Pre-trained models(抱脸 huggingface): [BioBERT](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2) | [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM)
+- 数据集压缩包 Dataset files(百度网盘 Baidu Webdisk): [Full Dataset Package](https://pan.baidu.com/s/1TNyLJSUbYj0lGsQfLDdjTA?pwd=4jxz)
 - (我们也提供基于百度网盘的预训练模型下载，您可以通过以下链接下载)
-- Pre-trained models Download Based on Baidu WebDisk(Baidu Webdisk): [All models](https://example.com/dataset-download)
+- 百度网盘存储的预训练模型 Pre-trained models Download Based on Baidu WebDisk(百度网盘 Baidu Webdisk): [All models](https://example.com/dataset-download)
 
 
-## 🚀 功能特性
+## 🚀 功能特性 Functional features
 - **双模态编码**：结合BioBERT蛋白质编码与ChEMBERT药物分子编码
 - **特征融合**：整合ECFP分子指纹与二肽组成特征
 - **高效训练**：引入ProbAttention降低模型内存和时间开销
 - **评估指标**：AUC-ROC、AUPR、F1-Score等综合评估体系
 
 
-## 🗂 项目结构（请在项目运行前检查项目结构是否完整、文件夹命名是否正确）
+## 🗂 项目结构 Project Structure（请在项目运行前检查项目结构是否完整、文件夹命名是否正确）
 ```bash
 .
 ├── biobert-v1.2/            # BioBERT预训练模型
@@ -54,7 +55,7 @@ Please download the following resources before proceeding:
 ```
 
 
-## 📦 环境依赖
+## 📦 环境依赖 Environment dependencies
 - python=3.12.9
 - cuda-version=12.8=3
 - cudnn=9.1.1.17=cuda12_1
@@ -71,7 +72,7 @@ pip install numpy==1.26.4
 ```
 
 
-## 📂 数据准备
+## 📂 数据准备 Data preparation
 1. 下载预训练模型（huggingface）：
    - [BioBERT-v1.2](https://huggingface.co/dmis-lab/biobert-base-cased-v1.2/tree/main) 放置于 `biobert-v1.2/`
    - [ChemBERTa](https://huggingface.co/DeepChem/ChemBERTa-77M-MLM) 放置于 `chamberts/`
@@ -93,12 +94,12 @@ dataset/
 - `Label`: 相互作用标签 (0/1)
 
 
-## 🏃 训练流程
+## 🏃 训练流程 Training flow
 ```bash
 python train.py
 ```
 
-关键参数：
+关键参数 Key parameters：
 - `--batch-size`: 批次大小 (默认：16)
 - `--epochs`: 训练轮次 (默认：50)
 - `--lr`: 初始学习率 (默认：1e-5)
