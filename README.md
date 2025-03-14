@@ -1,4 +1,4 @@
-```markdown
+
 # Drug-Target Interaction Prediction
 
 基于深度学习的药物-靶标相互作用预测模型，整合蛋白质序列特征与药物分子表示
@@ -106,4 +106,4 @@ python train.py \
 ## 🙏 致谢
 - BioBERT: [DMIS-Lab](https://github.com/dmis-lab/biobert)
 - ChEMBERT: [DeepChem](https://github.com/deepchem/deepchem)
-```
+
