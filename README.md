@@ -55,12 +55,15 @@ Please download the following resources before proceeding:
 
 
 ## 📦 环境依赖
-- Python 3.8+
-- PyTorch 1.12+
-- Transformers 4.28+
-- scikit-learn 1.2+
-- pandas 1.5+
-- numpy 1.23+
+- python=3.12.9
+- cuda-version=12.8=3
+- cudnn=9.1.1.17=cuda12_1
+- pytorch=2.5.1=py3.12_cuda12.1_cudnn9.1.0_0
+- transformers=4.45.2
+- scikit-learn=1.6.1
+- pandas=2.2.3
+- numpy=1.26.4
+- numpy-base=1.26.4
 
 安装依赖：
 ```bash
