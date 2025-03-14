@@ -67,7 +67,7 @@ Please download the following resources before proceeding:
 
 安装依赖：
 ```bash
-pip install torch transformers scikit-learn pandas numpy
+pip install numpy==1.26.4
 ```
 
 
