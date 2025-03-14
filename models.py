@@ -80,12 +80,12 @@ class BIN_Interaction_Flat(nn.Sequential):
         p_aug = torch.unsqueeze(p_encoded_layers, 1).repeat(1, 18, 1, 1) 
         
         i = d_aug * p_aug 
-        i_v = i.view(int(self.batch_size/self.gpus), -1, 18, 129) 
+        i_v = i.view(int(self.batch_size/1), -1, 18, 129) 
         i_v = torch.sum(i_v, dim = 1)
         i_v = torch.unsqueeze(i_v, 1)
         i_v = F.dropout(i_v, p = self.dropout_rate)        
         f = self.icnn(i_v)
-        f = f.view(int(self.batch_size/self.gpus), -1)
+        f = f.view(int(self.batch_size/1), -1)
         score = self.decoder(f)
         return score    
 
