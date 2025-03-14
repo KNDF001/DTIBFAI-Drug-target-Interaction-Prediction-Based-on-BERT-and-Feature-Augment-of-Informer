@@ -249,9 +249,9 @@ def main():
     bench_flag = 0
     data_queue_val = deque()
     bench_flag_val = 0
-    data_queue_test, bench_flag_test = load_data_from_file('./data_queue_val-12-9.pkl')
-    data_queue, bench_flag = load_data_from_file('./data_queue_val-12-9.pkl')
-    data_queue_val, bench_flag_val = load_data_from_file('./data_queue_val-12-9.pkl')
+    data_queue_test, bench_flag_test = load_data_from_file('./data_queue_test.pkl')
+    data_queue, bench_flag = load_data_from_file('./data_queue.pkl')
+    data_queue_val, bench_flag_val = load_data_from_file('./data_queue_val.pkl')
 
     if bench_flag_test == 0:
         for i, (d, p, d_mask, p_mask, label) in enumerate(testing_generator):
