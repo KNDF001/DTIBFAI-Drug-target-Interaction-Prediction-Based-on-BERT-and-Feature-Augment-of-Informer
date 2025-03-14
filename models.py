@@ -45,7 +45,7 @@ class BIN_Interaction_Flat(nn.Sequential):
         self.flatten_dim = config['flat_dim'] 
         self.icnn = nn.Conv2d(1, 3, 3, padding = 0) 
         self.decoder = nn.Sequential(
-            nn.Linear(4191, 1024),
+            nn.Linear(6096, 1024),
             nn.ReLU(True),
 
             nn.BatchNorm1d(1024),
@@ -77,10 +77,10 @@ class BIN_Interaction_Flat(nn.Sequential):
         p_encoded_layers = self.pmodel(p.float(), ex_p_mask.float())
 
         d_aug = torch.unsqueeze(d_encoded_layers, 2).repeat(1, 1, 129, 1) 
-        p_aug = torch.unsqueeze(p_encoded_layers, 1).repeat(1, 13, 1, 1) 
+        p_aug = torch.unsqueeze(p_encoded_layers, 1).repeat(1, 18, 1, 1) 
         
         i = d_aug * p_aug 
-        i_v = i.view(int(self.batch_size/self.gpus), -1, 13, 129) 
+        i_v = i.view(int(self.batch_size/self.gpus), -1, 18, 129) 
         i_v = torch.sum(i_v, dim = 1)
         i_v = torch.unsqueeze(i_v, 1)
         i_v = F.dropout(i_v, p = self.dropout_rate)        
